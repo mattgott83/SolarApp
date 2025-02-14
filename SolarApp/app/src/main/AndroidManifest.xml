@@ -12,16 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SolarApp"
         tools:targetApi="31">
+
+        <!-- Définir HomeActivity comme l'activité principale -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.HomeActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- Ajouter l'écran de sélection des crèmes -->
+        <activity android:name=".ui.SelectCreamActivity" />
+
+        <!-- Garder MainActivity si elle est encore utilisée -->
+        <activity android:name=".MainActivity" />
+
+        <activity android:name=".ui.SelectDosageActivity" />
+
+    </application>
 </manifest>
